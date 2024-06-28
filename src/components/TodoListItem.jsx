@@ -1,8 +1,8 @@
+import { memo } from "react";
 import { ImCheckboxChecked, ImCheckboxUnchecked } from "react-icons/im";
 import { CiCircleMinus } from "react-icons/ci";
 import cn from "classnames/bind";
 /* eslint-disable react/prop-types */
-
 const TodoListItem = ({ todo, onDelete, onToggle }) => {
   const { id, checked, text } = todo;
   return (
@@ -31,4 +31,4 @@ const TodoListItem = ({ todo, onDelete, onToggle }) => {
     </div>
   );
 };
-export default TodoListItem;
+export default memo(TodoListItem);
